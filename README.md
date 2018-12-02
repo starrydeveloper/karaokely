@@ -48,4 +48,5 @@ where a `"$"` symbol in lyrics stands for a `"cue."` in `AudioData.java`.
 - To clean up messed codes.
 - To add methods in `KaraokePlayer` so it can map and play sound files and lyrics text files from other sources other than `res/raw` folder and `assets` folder.
 
-
+### LICENSE
+"Best things in the world are always FREE," as they say, these codes are FREE for any uses and will always be. But if you love this idea and implementation, you can donate.
