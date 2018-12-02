@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center"
+	android:background="#2C1035"
+	android:orientation="vertical">
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="AIDE Group [ Myanmar ]\nPresents\nMP3 with Karaoke - style"
+		android:layout_width="wrap_content"
+		android:textColor="#FFFFFF"
+		android:textSize="16sp"
+		android:gravity="center"
+		android:typeface="serif"/>
+
+	<RelativeLayout
+		android:layout_height="250dp"
+		android:layout_width="match_parent"
+		android:layout_margin="10dp"
+		android:background="@drawable/sea_moon">
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="vertical"
+			android:layout_alignParentBottom="true"
+			android:id="@+id/pane"
+			android:padding="5dp"
+			android:layout_marginBottom="10dp">
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:textColor="#FFFFFF"
+				android:textSize="15sp"
+				android:id="@+id/firstLine"
+				android:singleLine="true"
+				android:textStyle="bold"/>
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:textColor="#FFFFFF"
+				android:textSize="15sp"
+				android:id="@+id/secondLine"
+				android:textStyle="bold"
+				android:singleLine="true"/>
+
+		</LinearLayout>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:textSize="15sp"
+			android:padding="5dp"
+			android:textColor="#FFFFFF"
+			android:id="@+id/cueTv"/>
+
+		<ImageView
+			android:layout_height="wrap_content"
+			android:layout_width="130dp"
+			android:layout_above="@id/pane"
+			android:layout_alignParentRight="true"
+			android:background="@drawable/mys"
+			android:alpha="0.3"/>
+
+	</RelativeLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal">
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="80dp"
+			android:background="@drawable/button"
+			android:textSize="15sp"
+			android:textColor="#FFFAFA"
+			android:onClick="selectSinger"
+			android:layout_marginRight="10dp"
+			android:id="@+id/toggle"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:text="Play"
+			android:layout_width="80dp"
+			android:background="@drawable/button"
+			android:textSize="15sp"
+			android:textColor="#FFFAFA"
+			android:onClick="startPlaying"
+			android:id="@+id/playButton"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:text="Cue"
+			android:layout_width="80dp"
+			android:background="@drawable/button"
+			android:textSize="15sp"
+			android:textColor="#FFFAFA"
+			android:id="@+id/cueButton"
+			android:onClick="showCue"
+			android:layout_marginLeft="10dp"
+			android:visibility="visible"/>
+
+	</LinearLayout>
+
+	<SeekBar
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:id="@+id/seekbar"
+		android:layout_marginTop="10dp"/>
+
+</LinearLayout>
