@@ -5,7 +5,7 @@ A demo android app for karaoke-like lyrics displaying by using `MediaPlayer` obj
 Wonder how to use? Well,
 A lyrics text file in `assets` folder,
 ```java
-$When I find myself in times of trouble$
+```diff -$ ```When I find myself in times of trouble$
 $Mother Mary$ $comes to me$
 $Speaking words of wisdom$
 $Let it be$
