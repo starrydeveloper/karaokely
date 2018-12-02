@@ -43,7 +43,7 @@ private int[][] letItBe() {
 
 ```
 
-where a ```diff-"$"``` in lyrics stands for a ```diff+"cue."```
+where a ```diff -"$" ``` symbol in lyrics stands for a ```diff +"cue."``` in `AudioData.java`.
 
 
 
