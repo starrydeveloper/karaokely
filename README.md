@@ -4,7 +4,20 @@ A demo android app for karaoke-like lyrics displaying by using `MediaPlayer` obj
 ### How To
 Wonder how to use? Well,
 A lyrics text file in `assets` folder,
-
+```java
+$When I find myself in times of trouble$
+$Mother Mary$ $comes to me$
+$Speaking words of wisdom$
+$Let it be$
+$And in my hour of$ $darkness$
+$She is standing$ $right in front of me$
+$Speaking$ $words of wisdom$
+$Let it be$
+$Let it be,$ $let it be,$ $let it be,$ $let it$ $be,$
+$Whisper words of wisdom$
+...
+...
+```java
 
 is mapped with the `int` values (let's call them "cues") from `getCurrentPosition()` method of `MediaPlayer` object and these cues are pre-hardcoded in `AudioData.java` class as follows;
 
@@ -24,8 +37,11 @@ private int[][] letItBe() {
 			{ 38709, 39309, 	40017, 40617, 	41605, 42205,		43221, 43823, 44023, 44323 },
 			{ 46261, 47888 },
 			// 10
+			
 
 ```java
+
+where a "$" in lyrics stands for a "cue."
 
 
 
