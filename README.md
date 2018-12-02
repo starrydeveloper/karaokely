@@ -5,7 +5,7 @@ A demo android app for karaoke-like lyrics displaying by using `MediaPlayer` obj
 Wonder how to use? Well,
 A lyrics text file in `assets` folder,
 ```java
-```diff -$ ```When I find myself in times of trouble$
+$When I find myself in times of trouble$
 $Mother Mary$ $comes to me$
 $Speaking words of wisdom$
 $Let it be$
@@ -43,7 +43,7 @@ private int[][] letItBe() {
 
 ```
 
-where a "$" in lyrics stands for a "cue."
+where a ```diff-"$"``` in lyrics stands for a ```diff+"cue."```
 
 
 
