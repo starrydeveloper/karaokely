@@ -43,7 +43,9 @@ private int[][] letItBe() {
 
 ```
 
-where a ```diff -"$" ``` symbol in lyrics stands for a ```diff +"cue."``` in `AudioData.java`.
-
+where a `"$"` symbol in lyrics stands for a `"cue."` in `AudioData.java`.
+### To-Do
+- To clean up messed codes.
+- To add methods in `KaraokePlayer` so it can map and play sound files and lyrics text files from other sources other than `res/raw` folder and `assets` folder.
 
 
