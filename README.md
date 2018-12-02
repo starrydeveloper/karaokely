@@ -17,9 +17,10 @@ $Let it be,$ $let it be,$ $let it be,$ $let it$ $be,$
 $Whisper words of wisdom$
 ...
 ...
-```java
+```
 
 is mapped with the `int` values (let's call them "cues") from `getCurrentPosition()` method of `MediaPlayer` object and these cues are pre-hardcoded in `AudioData.java` class as follows;
+
 
 ```java
 private int[][] letItBe() {
@@ -37,9 +38,10 @@ private int[][] letItBe() {
 			{ 38709, 39309, 	40017, 40617, 	41605, 42205,		43221, 43823, 44023, 44323 },
 			{ 46261, 47888 },
 			// 10
-			
+                      ...
+                      ...
 
-```java
+```
 
 where a "$" in lyrics stands for a "cue."
 
