@@ -140,7 +140,7 @@ public class KaraokePlayer implements SeekBar.OnSeekBarChangeListener {
 		updateProgressBar();
 	}
 
-	public void destroy() {
+	public void shutDown() {
 		cueHandler.removeCallbacks(mCueTracker);
 		stop();
 	}
@@ -322,7 +322,7 @@ public class KaraokePlayer implements SeekBar.OnSeekBarChangeListener {
 				mFirstLine.setText(KD.karaoke, TextView.BufferType.SPANNABLE);
 				mFirstLine.append(KD.nonKaraoke);
 			
-				long speed = mKaraokeLineA.getNextSpeed();
+				long speed = mKaraokeLineA.getSpeed();
 				KhandlerA.postDelayed(KrunnableA,speed);
 			} else if(mKaraokeLineA.hasMoreChunk()){
 				mKaraokeLineA.buildKaraoke();
@@ -338,7 +338,7 @@ public class KaraokePlayer implements SeekBar.OnSeekBarChangeListener {
 				mSecondLine.setText(KD.karaoke, TextView.BufferType.SPANNABLE);
 				mSecondLine.append(KD.nonKaraoke);
 			
-				long speed = mKaraokeLineB.getNextSpeed();
+				long speed = mKaraokeLineB.getSpeed();
 				KhandlerB.postDelayed(KrunnableB,speed);
 			} else if(mKaraokeLineB.hasMoreChunk()){
 				mKaraokeLineB.buildKaraoke();

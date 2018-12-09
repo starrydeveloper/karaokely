@@ -45,7 +45,7 @@ public class KaraokeLine {
 		}
 	}
 
-	private void processNextChunk() {
+	private void moveNextChunk() {
 		chunkIndex++;
 		chunk = mStringChunks[chunkIndex];
 		chunkLength = chunk.length();
@@ -68,7 +68,7 @@ public class KaraokeLine {
 		return chunkIndex < totalChunks;
 	}
 
-	public long getNextSpeed() {
+	public long getSpeed() {
 		return speed;
 	}
 
@@ -87,10 +87,11 @@ public class KaraokeLine {
 		if(charIndex <= chunkLength) {
 			sb.append(chunk.charAt(charIndex));
 			SpannableString karaoke = new SpannableString(sb.toString());
-			karaoke.setSpan(new BackgroundColorSpan(KaraokeData.KaraokeBackgroundColor) , 0, sb.toString().length(),Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-			karaoke.setSpan(new ForegroundColorSpan(KaraokeData.KaraokeColor) , 0, sb.toString().length(),Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+			int offsetEnd = sb.toString().length();
+			karaoke.setSpan(new BackgroundColorSpan(KaraokeData.KaraokeBackgroundColor) , 0, offsetEnd,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+			karaoke.setSpan(new ForegroundColorSpan(KaraokeData.KaraokeColor) , 0,offsetEnd,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 			KD.karaoke = karaoke;
-			KD.nonKaraoke = (mLine.substring(sb.toString().length(), mLine.length()));
+			KD.nonKaraoke = (mLine.substring(offsetEnd, mLine.length()));
 			charIndex++;
 		}
 
@@ -100,6 +101,6 @@ public class KaraokeLine {
 	public void buildKaraoke() {
 		charIndex = 0;
 		runCounts = 0;
-		processNextChunk();
+		moveNextChunk();
 	}
 }
