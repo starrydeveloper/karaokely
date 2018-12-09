@@ -17,10 +17,10 @@ public class KaraokeActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-		
+	
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-		
+		setContentView(R.layout.main);
+	
 		View pane = findViewById(R.id.pane);
 		pane.setBackgroundColor(Color.argb(30,0,0,255));
 		
@@ -85,7 +85,7 @@ public class KaraokeActivity extends Activity {
 	@Override
 	public void onBackPressed() {
 		if(mKaraokePlayer != null) {
-			mKaraokePlayer.destroy();
+			mKaraokePlayer.shutDown();
 		}
 		super.onBackPressed();
 	}
@@ -93,7 +93,7 @@ public class KaraokeActivity extends Activity {
 	@Override
 	protected void onDestroy() {
 		if(mKaraokePlayer != null) {
-			mKaraokePlayer.destroy();
+			mKaraokePlayer.shutDown();
 		}
 		super.onDestroy();
 	}
