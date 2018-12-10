@@ -1,9 +1,9 @@
 # Karaokely
-A demo android app for karaoke-like lyrics displaying by using `MediaPlayer` object, `SpannableString` , `Handler`  and `Runnable` .
+A demo android app for karaoke-like lyrics displaying by using `MediaPlayer` object, `SpannableString` , `Handler`  and `Runnable` . 
+And maybe this project gives or at least, tries to give solutions to [stackoverflow](https://www.stackoverflow.com) questions like [this](https://stackoverflow.com/questions/42628761/im-creating-a-karaoke-like-app-in-android-studio#comment72385499_42628761), and [this](https://stackoverflow.com/questions/6050750/android-karaoke-text), and [this](https://stackoverflow.com/questions/12025055/how-should-i-time-highlighting-of-text-with-audio-for-a-karaoke-like-application).
 
 ### How To
-Wonder how to use? Well,
-A lyrics text file in `assets` folder,
+Wonder how to use? Well, a lyrics text file in `assets` folder,
 ```java
 $When I find myself in times of trouble$
 $Mother Mary$ $comes to me$
@@ -43,7 +43,8 @@ private int[][] letItBe() {
 
 ```
 
-where a `"$"` symbol in lyrics stands for a `"cue."` in `AudioData.java`.
+where a `"$"` symbol in lyrics stands for a `"cue"` in `AudioData.java`. That's it and you hardly have to touch any other karaoke-related classes in the project.
+
 ### To-Do
 - To clean up messed codes.
 - To add methods in `KaraokePlayer` so it can map and play sound files and lyrics text files from other sources other than `res/raw` folder and `assets` folder.
