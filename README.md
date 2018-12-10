@@ -45,6 +45,9 @@ private int[][] letItBe() {
 
 where a `"$"` symbol in lyrics stands for a `"cue"` in `AudioData.java`. That's it and you hardly have to touch any other karaoke-related classes in the project.
 
+### A Word for Wises
+Believe it or not, the smoothness of the running karaoke-like text/lyrics is determined by how well you time-spilt your chunks of lyrics or texts, **Not** by the codes implemented. Not buying? OK, you're welcome to tweak some "cue" values in `AudioData.java` and see them in action in the demo app yourself.
+
 ### To-Do
 - To clean up messed codes.
 - To add methods in `KaraokePlayer` so it can map and play sound files and lyrics text files from other sources other than `res/raw` folder and `assets` folder.
